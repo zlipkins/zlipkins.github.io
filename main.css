@@ -54,8 +54,7 @@ body {
 }
 
 .sm {
-	width: 250px;
-}
+	width: 250px;}
 
 .link {
 	width: 100%;
@@ -113,4 +112,43 @@ body {
 	.sm {width: 60%;}
 }
 
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
 
+.fadeIn {
+	opacity: 0;
+	-webkit-animation: fadeIn 1s forwards;
+	-webkit-animation-delay: 1s;
+}
+.fadeIn2 {
+	opacity: 0;
+	-webkit-animation: fadeIn 1.5s forwards;
+	-webkit-animation-delay: 1s;
+}
+.fadeIn3 {
+	opacity: 0;
+	-webkit-animation: fadeIn 2s forwards;
+	-webkit-animation-delay: 1s;
+}
+.fadeIn4 {
+	opacity: 0;
+	-webkit-animation: fadeIn 2.5s forwards;
+	-webkit-animation-delay: 1s;
+}
+.fadeIn5 {
+	opacity: 0;
+	-webkit-animation: fadeIn 3s forwards;
+	-webkit-animation-delay: 1s;
+}
+.fadeIn6 {
+	opacity: 0;
+	-webkit-animation: fadeIn 3.5s forwards;
+	-webkit-animation-delay: 1s;
+}
+.fadeInLogo {
+	opacity: 0;
+	-webkit-animation: fadeIn 2s forwards cubic-bezier(0.205, 0.785, 0.710, 0.960);
+	-webkit-animation-delay: 0.4s;
+}
