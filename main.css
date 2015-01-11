@@ -10,7 +10,6 @@ body {
 }
 
 
- 
 
 .fader {
 	width: 100%;
@@ -42,6 +41,10 @@ body {
 	position: fixed;
 	z-index: 20;
 	vertical-align: center;
+}
+
+.content img {
+	margin-bottom: 1px;
 }
 
 .positioner {
