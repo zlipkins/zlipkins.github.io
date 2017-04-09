@@ -52,7 +52,7 @@ $(document).ready(function() {
   // CREATE FULL SCREEN DIVS FOR EACH PIC THEN DISPLAY: BLOCK OR VISIBILITY
 
   $("#forever-anchor").mouseenter(function() {
-    $("#main-container").css("background", "url(assets/valentin3.1_BAN.jpg) no-repeat center center fixed");
+    $("#main-container").css("background", "url(/images/valentin3.1_BAN.jpg) no-repeat center center fixed");
     $("#main-container").css("-webkit-background-size", "cover");
     $("#main-container").css("-moz-background-size", "cover");
     $("#main-container").css("-o-background-size", "cover");
@@ -73,7 +73,7 @@ $(document).ready(function() {
   });
 
   $("#pain-anchor").mouseover(function() {
-    $("#main-container").css("background", "url(assets/buste3.1BAN.jpg) no-repeat center center fixed");
+    $("#main-container").css("background", "url(/images/buste3.1BAN.jpg) no-repeat center center fixed");
     $("#main-container").css("-webkit-background-size", "cover");
     $("#main-container").css("-moz-background-size", "cover");
     $("#main-container").css("-o-background-size", "cover");
@@ -95,7 +95,7 @@ $(document).ready(function() {
   });
 
   $("#spotlight-anchor").mouseover(function() {
-    $("#main-container").css("background", "url(assets/chaise3.2_BAN.jpg) no-repeat center center fixed");
+    $("#main-container").css("background", "url(/images/chaise3.2_BAN.jpg) no-repeat center center fixed");
     $("#main-container").css("-webkit-background-size", "cover");
     $("#main-container").css("-moz-background-size", "cover");
     $("#main-container").css("-o-background-size", "cover");
