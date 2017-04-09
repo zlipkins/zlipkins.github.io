@@ -1,0 +1,665 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/***
+FULL SCREEN IMAGE BACKGROUND
+***/
+#shell-container {
+	display: none;
+}
+
+#main-container {
+	width: 100vw;
+	height: 100vh;
+	background: url("../assets/cover-long.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/***
+FONTS
+***/
+@font-face {
+    font-family: avenir;
+    src: url("../assets/avenir-next-bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: avenir-lite;
+    src: url("../assets/avenir.otf") format('opentype');
+}
+
+@font-face {
+    font-family: consolas;
+    src: url("../assets/consolas.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: freight;
+    src: url("../assets/practice_black.otf") format('opentype');
+}
+
+.avenir-lite {
+	font-family: avenir-lite;
+    letter-spacing: 0.2rem;
+
+}
+
+.col-1-4 {
+	width: 25vw;
+}
+
+.col-3-4 {
+	width: 75vw;
+}
+
+.avenir {
+  	z-index: 1;
+    font-family: avenir;
+    letter-spacing: 0.2rem;
+}
+
+.quattrocento {
+	font-family: 'Quattrocento', serif;
+}
+
+h3.quattrocento {
+	 font-size: 2rem; 
+	 letter-spacing: 0.3rem;
+}
+
+p.quattrocento {
+	 font-size: 1.3rem; 
+	 letter-spacing: 0.3rem;	
+}
+
+h1.avenir {
+    font-size: 5rem;
+}
+
+h2.avenir {
+    font-size: 2.2rem;
+}
+
+h3.avenir {
+    font-size: 1.8rem;
+}
+
+.apple {
+	font-family: apple;
+}
+
+.consolas {
+	font-family: consolas;
+}
+
+h3.freight {
+	font-size: 2rem;
+	letter-spacing: 0.3rem;
+}
+
+p.freight {
+	font-size: 1.5rem;
+	letter-spacing: 0.3rem;
+}
+
+.andale {
+	font-family: andale;
+}
+
+/***
+PROMO MODAL CODE
+***/
+
+#promo-bg {
+
+		position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: #532A2C;
+}
+
+#x-out, .x-out2 {
+	cursor: pointer;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+#promo-modal {
+	position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	display: flex;
+	text-align: center;
+	align-items: center;
+	background-color: black;
+	color: white;
+	width: 80vw;
+	max-width: 1500px;
+
+}
+
+#l-side {
+	flex:1;
+}
+
+#l-side img {
+	width: 100%;
+	margin-bottom: -4px;
+}
+
+#r-side {
+	flex:1;
+	background-color: black;
+	height: 100%;
+}
+
+#main-logo img {
+	margin-left: 20px;
+}
+
+
+#promo-modal-promo-text h1 {
+	margin-top: 20px;
+	margin-left: 20px;
+	color: white;
+}
+
+#promo-modal-promo-text h2 {
+	color: white;
+	font-size: 2.7rem;
+}
+
+#new-single-promo {
+	margin-top: 40px;
+	margin-bottom: 45px;
+	font-size: 1.5rem;
+}
+
+#out-now-promo {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: white;
+	font-size: 2rem;
+	display: inline; 
+	padding: 20px 20px 15px 20px; 
+	border: 2px solid white;
+}
+
+#promo-modal-promo-links h3 {
+	color: white;
+	font-size: 1.5rem;
+}
+
+#spotify-promo {
+	margin-top: 50px;
+}
+
+#spotify-link {
+	color: #ffc9fc;
+	text-decoration: none;
+}
+
+#itunes-promo {
+	margin-top: 20px;
+}
+
+#itunes-link {
+	color: #859ECD;
+	text-decoration: none;
+}
+
+#promo-modal-promo-links a {
+	font-family: avenir;
+	font-size: 1.5rem;
+}
+
+#promo-modal-promo-links a:hover {
+	color: white;
+}
+
+/***
+SINGLE LINKS CODE
+***/
+
+#single-links {
+	display: none;
+	height: 100vh;
+	color: white;
+	align-items: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: space-around;
+}
+
+#single-links p {
+	color: white;
+	font-size: 17px;
+	padding: 10px;
+}
+
+#single-links a:hover {
+	color: #957EC6;	
+}
+
+
+#single-links p:hover {
+	color: #957EC6;	
+}
+
+.anchor a {
+	text-decoration: none; 
+	color: white;
+}
+
+#forever-anchor {
+	cursor: pointer; 
+	margin-left: 80px;
+}
+
+#spotlight-anchor {
+	cursor: pointer; 
+	margin-right: 80px;
+}
+
+#contact-btn {
+	display: none;
+}
+
+#contact-btn a {
+	color: white;
+	font-size: 17px;
+	padding: 10px;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	text-decoration: none;
+}
+
+#contact-btn a:hover {
+	color: #957EC6;
+}
+
+#manager-headline {
+	padding-left: 25px;
+}
+
+#press-headline {
+	padding-left: 25px;
+}
+
+#mail-headline {
+	padding-left: 25px;
+}
+
+#general-headline {
+	padding-left: 25px;
+}
+
+#zindex9 {
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	right: 5px;
+  z-index: 10;
+}
+
+#zindex9 a img{
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+/***
+EMBED OVERLAY
+***/
+.video-modal {
+
+  opacity: 0;
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  transition: all 720ms cubic-bezier(0.770, 0.000, 0.175, 1.000) 0ms;
+}
+
+#forever-modal {
+	background-color: #2A4D7C;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  transition: all 720ms cubic-bezier(0.770, 0.000, 0.175, 1.000) 0ms;
+}
+
+#foreverbg {
+  background-color: #2A4D7C;
+}
+#painbg {
+background-color: #21605F;
+}
+
+
+#spotlightbg {
+  background-color: #F4C0B9;
+}
+/*#forever-anchor:hover {
+	background: url("/refs2/assets/forever-full.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
+
+#pain-modal {
+	background-color: #21605F;
+}
+
+#spotlight-modal {
+	background-color: #F4C0B9;
+}
+
+/***
+CONTACT PAGE STYLES
+***/
+
+#contact-container {
+	height: 100vh;
+	width: 100vw;
+	background-color: #0d0d0d;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 100px;
+}
+
+#contact-container a {
+	color: white;
+	text-decoration: underline; 
+	font-size: 16px;
+}
+
+#contact-container a:hover {
+	color: #957EC6;
+}
+
+	#manager-div {
+	  	display: inline-flex;
+	  	width: 100vw;
+	  	padding-top:25px;
+	}
+
+	#press-div {
+		display: inline-flex;
+		width: 100vw;
+	}
+
+	#mail-list-div {
+		display: inline-flex;
+		width: 100vw;
+	}
+
+	#general-div {
+		display: inline-flex;
+		width: 100vw;
+	}
+
+#manager-email {
+	color: white;
+	text-decoration: underline; 
+	font-size: 21px
+}
+
+#singles-btn a {
+	color: white;
+	font-size: 17px;
+	padding: 10px;
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+	text-decoration: none;
+}
+
+#singles-btn a:hover {
+	color: #957EC6;
+	cursor: pointer;
+}
+
+.animated {
+  z-index: 9;
+}
+.hide {
+  display: none;
+  transition: all 72ms cubic-bezier(0.770, 0.000, 0.175, 1.000) 0ms;
+}
+
+.texteffects {
+position: fixed;
+display: flex;
+justify-content: center;
+width: 100%;
+transition: all 72ms cubic-bezier(0.770, 0.000, 0.175, 1.000) 0ms;
+}
+
+.add-opacity {
+  opacity: 1;
+}
+.remove-opacity {
+  opacity: 0;
+}
+
+.hidetext {
+  opacity: 0;
+}
+
+.showvideo {
+	top: 50%;
+	opacity: 1;
+	z-index: 30;
+}
+
+@media only screen and (min-width: 769px) {
+	#main-container {
+	width: 100vw;
+	height: 100vh;
+	background: url("../assets/cover-long.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+}
+
+@media only screen and (max-width: 768px) {
+	#main-container {
+		background: url("../assets/focusLPcoverBAN1X3_2.1.jpg") repeat;
+
+	}
+
+	#promo-modal {
+		position: fixed;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+		display: block;
+		text-align: center;
+		align-items: center;
+		background-color: black;
+		color: white;
+		width: 70vw;
+		max-width: 1500px;
+	}	
+	
+	#r-side {
+	flex:1;
+	background-color: black;
+	height: 100%;
+}
+	
+	#promo-modal-promo-text h2 {
+		color: white;
+		font-size: 0.9rem;
+		margin-top: 10px;
+		margin-top: 45px;
+	}
+	
+	#new-single-promo {
+	margin-top: 25px;
+	margin-bottom: 20px;
+	font-size: 0.8rem;
+}
+	
+
+	#forever-anchor {
+		margin-left: 0px;
+	}
+
+	#spotlight-anchor {
+		margin-right: 0px;
+	}	
+
+	#single-links {
+	height: 80vh;
+	color: white;
+	flex-direction: column;
+	align-items: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: space-around;
+	}
+	
+	#out-now-promo {
+	font-size: 0.7rem;
+	padding: 12px 12px 7px 12px;
+	
+	}
+
+	#promo-modal-promo-links a {
+	font-family: avenir;
+	font-size: 0.9rem;
+
+	}
+	
+	#spotify-promo {
+		margin-top: 40px;
+	}
+ 
+	#itunes-promo {
+		margin-top: 10px;
+		padding-bottom: 45px;
+	}
+
+	
+	#promo-modal-promo-links h3 {
+		font-size: 0.8rem;
+		margin-bottom: 5px;
+	}
+
+	iframe {
+		width: 375px;
+		height: 211px;
+	}
+
+	#contact-container {
+		padding-top: 0px;
+		margin-left: 0px;
+	}
+
+	#manager-div {
+	  	display: block;
+	}
+
+	#press-div {
+		display: block;
+	}
+
+	#mail-list-div {
+		display: block;
+	}
+
+	#general-div {
+		display: block;
+	}
+
+	#manager-div {
+		padding-top: 0px;
+	}
+	#contact-container {
+		padding-left: 15px;
+	}
+
+	#manager-headline {
+		padding-left: 0px;
+	}
+
+	#press-headline {
+		padding-left: 5px;
+	}
+
+	#mail-headline {
+		padding-left: 5px;
+	}
+
+	#general-headline {
+		padding-left: 5px;
+	}
+}
