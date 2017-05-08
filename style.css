@@ -211,6 +211,10 @@ PROMO MODAL CODE
 	height: 100%;
 }
 
+#fc-song-title {
+	margin-left: 9px;
+}
+
 #main-logo img {
 	margin-left: 20px;
 }
@@ -230,6 +234,7 @@ PROMO MODAL CODE
 #new-single-promo {
 	margin-top: 40px;
 	margin-bottom: 45px;
+	margin-left: 3px;
 	font-size: 1.5rem;
 }
 
