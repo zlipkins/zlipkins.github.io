@@ -12,7 +12,7 @@
 		<div id="promo-bg">
 			<img height="30" id="x-out" src="/images/x-pink.svg" style="float: right;" width="30">
 			<div id="promo-modal">
-				<div id="l-side"><img src="/images/forever-2.jpg"></div>
+				<div id="l-side"><img id="fc-image"></div>
 				<div id="r-side">
 					<div id="promo-modal-promo-text">
 						<h2 id="fc-song-title" class="avenir" style="margin-top: 50px;"></h2>
@@ -20,8 +20,8 @@
 						<h3 class="avenir" id="out-now-promo">OUT NOW</h3>
 					</div>
 					<div id="promo-modal-promo-links">
-						<h3 class="avenir" id="spotify-promo">Play on <a href="https://play.spotify.com/album/2qtVbd33rthWD4ALuFHJBk?play=true&utm_source=open.spotify.com&utm_medium=open" id="spotify-link">Spotify</a></h3>
-						<h3 class="avenir" id="itunes-promo">Order from <a href="https://itunes.apple.com/us/artist/refs/id980316371" id="itunes-link">iTunes</a></h3>
+						<h3 class="avenir" id="spotify-promo">Play on <a id="spotify-link">Spotify</a></h3>
+						<h3 class="avenir" id="itunes-promo">Order from <a id="itunes-link">iTunes</a></h3>
 					</div>
 				</div>
 			</div>
@@ -123,6 +123,12 @@
 			console.log("DATA IS: " + data);
 			var currentSongTitle = document.getElementById('fc-song-title');
   			currentSongTitle.innerHTML = `${data.songTitle}`
+			  var currentSpotifyLink = document.getElementById('spotify-link');
+			  currentSpotifyLink.href = `${data.spotifyLink}`
+			  var currentItunesLink = document.getElementById('itunes-link');
+			  currentItunesLink.href = `${data.itunesLink}`
+			  var currentImage = document.getElementById('fc-image');
+			  currentImage.src = `${data.cardImage}`
 		});
 	</script>
 	<script src="jquery-3.1.1.js"></script> 
