@@ -15,7 +15,7 @@
 				<div id="l-side"><img src="/images/forever-2.jpg"></div>
 				<div id="r-side">
 					<div id="promo-modal-promo-text">
-						<h2 class="avenir" style="margin-top: 50px;">`FOREVER`</h2>
+						<h2 id="fc-song-title" class="avenir" style="margin-top: 50px;"></h2>
 						<h3 class="avenir" id="new-single-promo">New Single</h3>
 						<h3 class="avenir" id="out-now-promo">OUT NOW</h3>
 					</div>
@@ -102,12 +102,31 @@
 			</div>
 		</div>
 	</div>
-	<script src="jquery-3.1.1.js">
-	</script> 
-	<script src="main.js">
-	</script> 
-	<script src="test.js">
-	</script> 
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDnQwyCLc0UuHab9tra0ipEbNOI9YYI2R0",
+		    authDomain: "refsmusic-1647a.firebaseapp.com",
+		    databaseURL: "https://refsmusic-1647a.firebaseio.com",
+		    projectId: "refsmusic-1647a",
+		    storageBucket: "refsmusic-1647a.appspot.com",
+		    messagingSenderId: "587281044387"
+		  };
+		  firebase.initializeApp(config);
+		  var storage = firebase.storage();
+		  var storageRef = storage.ref();
+		// POPULATE PAGE
+		  var frontCardRef = firebase.database().ref('frontCard');
+		  frontCardRef.once('value').then(function(snapshot) {
+	  	  	var data = snapshot.val();
+			var currentSongTitle = document.getElementById('fc-song-title');
+  			currentSongTitle.innerHTML = `${data.songTitle}`
+		});
+	</script>
+	<script src="jquery-3.1.1.js"></script> 
+	<script src="main.js"></script> 
+	<script src="test.js"></script> 
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
 	</script> 
 	<script>
