@@ -685,3 +685,12 @@ transition: all 72ms cubic-bezier(0.770, 0.000, 0.175, 1.000) 0ms;
 		padding-left: 5px;
 	}
 }
+
+/* ICON FIX FOR < iPhone 6 screens */
+@media only screen and (max-device-width : 568px) {
+ 
+#zindex9 a img{
+    margin-right: 5px;
+}
+ 
+}
