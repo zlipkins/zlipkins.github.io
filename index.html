@@ -120,6 +120,7 @@
 		  var frontCardRef = firebase.database().ref('frontCard');
 		  frontCardRef.once('value').then(function(snapshot) {
 	  	  	var data = snapshot.val();
+			console.log("DATA IS: " + data);
 			var currentSongTitle = document.getElementById('fc-song-title');
   			currentSongTitle.innerHTML = `${data.songTitle}`
 		});
